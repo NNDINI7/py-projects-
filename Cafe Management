@@ -1,0 +1,30 @@
+menu = {
+    'Crispy veg' : 100,
+    'american chopsey' : 120,
+    'panner tikka' : 200,
+    'coffee' : 50
+}
+
+print("WELCOME TO RESTRO")
+print("Crispy veg : 100\nAmerican chopsey : 120\nPanner tikka : 200\ncoffee : 50")
+
+order_total = 0
+#user input 
+i1=input("Enter the name of item you want to order = ")
+if i1 in menu:
+    order_total += menu[i1]
+    print(f"ur item {i1} has been added to ur order ")
+else:
+    print(f"ordered item {i1} is not available yet !!")
+
+another_order = input("do you want to order anything else(yes/no)")
+if another_order == "yes":
+    i2= input("Enter the name of second item = ")
+    if i2 in menu :
+        order_total += menu[i2]
+        print(f"ordered item {i2} has been added to ur order")
+    else:
+        print(f"ordered item {i1} is not available yet !!")
+
+print(f"total amount of order to pay is {order_total} ")
+
